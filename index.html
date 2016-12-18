@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>Beith Rivka closet</title>
+</head>
+<body>
+
+<!-- in the <button> tags below the ID attribute is the value sent to the arduino -->
+Cell number: <input type="text" name="fname"><br>
+
+
+<button id="11" class="led">reset cell password</button> <!-- button for pin 11 -->
+<button id="12" class="led">unlock cell</button><br> <!-- button for pin 12 -->
+
+
+<select>
+    <option value="class A">class A</option>
+    <option value="class B">class B</option>
+    <option value="class C">class C</option>
+    <option value="class D">class D</option>
+</select><br>
+
+<button id="13" class="led">unlock class cells</button><br> <!-- button for pin 13 -->
+sunday:<select>
+    <option value="12:00">12:00</option>
+    <option value="13:00">13:00</option>
+    <option value="14:00">14:00</option>
+    <option value="16:00">16:00</option>
+</select><br>
+monday:<select>
+    <option value="12:00">12:00</option>
+    <option value="13:00">13:00</option>
+    <option value="14:00">14:00</option>
+    <option value="16:00">16:00</option>
+</select><br>
+tuesday:<select>
+    <option value="12:00">12:00</option>
+    <option value="13:00">13:00</option>
+    <option value="14:00">14:00</option>
+    <option value="16:00">16:00</option>
+</select><br>
+wednesday:<select>
+    <option value="12:00">12:00</option>
+    <option value="13:00">13:00</option>
+    <option value="14:00">14:00</option>
+    <option value="16:00">16:00</option>
+</select><br>
+thursday:<select>
+    <option value="12:00">12:00</option>
+    <option value="13:00">13:00</option>
+    <option value="14:00">14:00</option>
+    <option value="16:00">16:00</option>
+</select><br>
+friday:<select>
+    <option value="12:00">12:00</option>
+    <option value="13:00">13:00</option>
+    <option value="14:00">14:00</option>
+    <option value="16:00">16:00</option>
+</select><br>
+<button id="13" class="led">change class release time</button><br>
+
+
+
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".led").click(function(){
+            var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
+            // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+            $.get("http://192.168.4.1:80/", {pin:p}); // execute get request
+        });
+    });
+</script>
+</body>
+</html>
