@@ -1,44 +1,49 @@
 <html>
 <head>
     <title>Beith Rivka closet</title>
+    <link type="text/css" rel="stylesheet" href="mycs.css">
 </head>
 <body>
 
 <!-- in the <button> tags below the ID attribute is the value sent to the arduino -->
-Cell number: <input type="text" name="fname"><br>
 
 
+<div id="first">
+    Cell number: <input type="text" name="fname"><br>
 <button id="11" class="led">reset cell password</button> <!-- button for pin 11 -->
 <button id="12" class="led">unlock cell</button><br> <!-- button for pin 12 -->
-
-
+</div>
+<div>
 <select>
     <option value="class A">class A</option>
     <option value="class B">class B</option>
     <option value="class C">class C</option>
     <option value="class D">class D</option>
 </select><br>
+    <button id="13" class="led">unlock class cells</button><br> <!-- button for pin 13 -->
+</div>
+<div id="second">
 
-<button id="13" class="led">unlock class cells</button><br> <!-- button for pin 13 -->
-sunday:<select>
+
+sunday:    <select>
     <option value="12:00">12:00</option>
     <option value="13:00">13:00</option>
     <option value="14:00">14:00</option>
     <option value="16:00">16:00</option>
 </select><br>
-monday:<select>
+monday:  <select>
     <option value="12:00">12:00</option>
     <option value="13:00">13:00</option>
     <option value="14:00">14:00</option>
     <option value="16:00">16:00</option>
 </select><br>
-tuesday:<select>
+tuesday:  <select>
     <option value="12:00">12:00</option>
     <option value="13:00">13:00</option>
     <option value="14:00">14:00</option>
     <option value="16:00">16:00</option>
 </select><br>
-wednesday:<select>
+wednesday:  <select>
     <option value="12:00">12:00</option>
     <option value="13:00">13:00</option>
     <option value="14:00">14:00</option>
@@ -56,8 +61,8 @@ friday:<select>
     <option value="14:00">14:00</option>
     <option value="16:00">16:00</option>
 </select><br>
-<button id="13" class="led">change class release time</button><br>
-
+<button id="14" class="led">change class release time</button><br>
+</div>
 
 
 <script src="jquery.min.js"></script>

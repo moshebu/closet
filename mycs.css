@@ -1,0 +1,29 @@
+#second div {
+    display: inline-block;
+    border: dashed 2px  red;
+    color: #448039;
+}
+div {
+
+    border: solid 2px  green;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+select {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    margin-left: 8px;
+}
+
+input {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    margin-left: 8px;
+}
