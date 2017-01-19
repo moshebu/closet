@@ -6,74 +6,150 @@
 <body>
 
 <!-- in the <button> tags below the ID attribute is the value sent to the arduino -->
-
+<div id="title">
+    בקרת ארון לאכסון פלאפונים
+</div>
 
 <div id="first">
-    Cell number: <input type="text" name="fname"><br>
-<button id="11" class="led">reset cell password</button> <!-- button for pin 11 -->
-<button id="12" class="led">unlock cell</button><br> <!-- button for pin 12 -->
+<!--    <form action="demo_form.asp">-->
+        <label>First name:</label> <input type="text" name="FirstName" value="Mickey"><br>
+        <label>Last name:</label> <input type="text" name="LastName" value="Mouse"><br>
+        <button id="10" class="add_name">submit</button>
+        <br>
+<!--    </form>-->
+    Cell number: <input type="text" name="cell_num" id="cell"><br>
+    <button id="11" class="reset_password">reset cell password</button>
+    <button id="12" class="unlock_cell">unlock cell</button>
+    <button id="13" class="open_cell">open cell</button>
+    <br> <!-- button for pin 12 -->
 </div>
 <div>
-<select>
-    <option value="class A">class A</option>
-    <option value="class B">class B</option>
-    <option value="class C">class C</option>
-    <option value="class D">class D</option>
-</select><br>
-    <button id="13" class="led">unlock class cells</button><br> <!-- button for pin 13 -->
+    <select id="group">
+        <option value="1">class A</option>
+        <option value="2">class B</option>
+        <option value="3">class C</option>
+        <option value="4">class D</option>
+    </select><br>
+    <button id="14" class="release_group">unlock class cells</button>
+    <br>
+    <button id="15" class="release_all">release all</button>
+    <br> <!-- button for pin 13 -->
 </div>
 <div id="second">
+    <!--    <form action="demo_form.asp"> -->
+            <select id="select_group">
+                <option value="1">class A</option>
+                <option value="2">class B</option>
+                <option value="3">class C</option>
+                <option value="4">class D</option>
+            </select><br>
+            <label>sunday:</label> <select id="select_time1">
+            <option value="1200">12:00</option>
+            <option value="1300">13:00</option>
+            <option value="1400">14:00</option>
+            <option value="1600">16:00</option>
+        </select><br>
+            <label>monday:</label> <select id="select_time2">
+            <option value="1200">12:00</option>
+            <option value="1300">13:00</option>
+            <option value="1400">14:00</option>
+            <option value="1600">16:00</option>
+        </select><br>
+            <label>tuesday:</label> <select id="select_time3">
+            <option value="1200">12:00</option>
+            <option value="1300">13:00</option>
+            <option value="1400">14:00</option>
+            <option value="1600">16:00</option>
+        </select><br>
+            <label>wednesday:</label> <select id="select_time4">
+            <option value="1200">12:00</option>
+            <option value="1300">13:00</option>
+            <option value="1400">14:00</option>
+            <option value="1600">16:00</option>
+        </select><br>
+            <label>thursday:</label><select id="select_time5">
+            <option value="1200">12:00</option>
+            <option value="1300">13:00</option>
+            <option value="1400">14:00</option>
+            <option value="1600">16:00</option>
+        </select><br>
+            <label>friday:</label><select id="select_time6">
+            <option value="1200">12:00</option>
+            <option value="1300">13:00</option>
+            <option value="1400">14:00</option>
+            <option value="1600">16:00</option>
+        </select><br>
+            <button id="16" class="group_change">set_hour_table</button>
+            <br>
+    <!--  </form>-->
+    </div>
+    <div>
+        new time: <input type="text" name="hour" id="hour"><br>
+        <button id="17" class="set_time">set time</button>
 
+    </div>
 
-sunday:    <select>
-    <option value="12:00">12:00</option>
-    <option value="13:00">13:00</option>
-    <option value="14:00">14:00</option>
-    <option value="16:00">16:00</option>
-</select><br>
-monday:  <select>
-    <option value="12:00">12:00</option>
-    <option value="13:00">13:00</option>
-    <option value="14:00">14:00</option>
-    <option value="16:00">16:00</option>
-</select><br>
-tuesday:  <select>
-    <option value="12:00">12:00</option>
-    <option value="13:00">13:00</option>
-    <option value="14:00">14:00</option>
-    <option value="16:00">16:00</option>
-</select><br>
-wednesday:  <select>
-    <option value="12:00">12:00</option>
-    <option value="13:00">13:00</option>
-    <option value="14:00">14:00</option>
-    <option value="16:00">16:00</option>
-</select><br>
-thursday:<select>
-    <option value="12:00">12:00</option>
-    <option value="13:00">13:00</option>
-    <option value="14:00">14:00</option>
-    <option value="16:00">16:00</option>
-</select><br>
-friday:<select>
-    <option value="12:00">12:00</option>
-    <option value="13:00">13:00</option>
-    <option value="14:00">14:00</option>
-    <option value="16:00">16:00</option>
-</select><br>
-<button id="14" class="led">change class release time</button><br>
-</div>
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".add_name").click(function () {
+                var p = "<name>" ;
+                //         var p = $(".cell").attr('value'); // get id value (i.e. pin13, pin12, or pin11)
+                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+                $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
+            });
+            $(".reset_password").click(function () {
+                var p = "<reset_password>" +document.getElementById('cell').value;
+    //            var xxx = "<reset>";
+                //         var p = $(".cell").attr('value'); // get id value (i.e. pin13, pin12, or pin11)
+                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+                $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
+            });
+            $(".unlock_cell").click(function () {
+                var p = "<release_cell>" +document.getElementById('cell').value;
+                //         var p = $(".cell").attr('value'); // get id value (i.e. pin13, pin12, or pin11)
+                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+                $.get("http://192.168.4.1:80/", {xxx : p}); // execute get request
+            });
+            $(".open_cell").click(function () {
+                var p = "<open_cell>" +document.getElementById('cell').value;
+                //         var p = $(".cell").attr('value'); // get id value (i.e. pin13, pin12, or pin11)
+                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+                $.get("http://192.168.4.1:80/", {xxx : p}); // execute get request
+            });
+            $(".release_group").click(function () {
+                var p ="<release_group>" + document.getElementById('group').value;
+    //            var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
+                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+                $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
+            });
+            $(".release_all").click(function () {
+                var p = "<release_all>";
+                //           var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
+                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+                $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
+            });
+            $(".group_change").click(function () {
+                var p =  "<set_hour_table>" +
+                        ";" + document.getElementById('select_group').value +
+                        ";" + document.getElementById('select_time1').value +
+                        ";" + document.getElementById('select_time2').value +
+                        ";" + document.getElementById('select_time3').value +
+                        ";" + document.getElementById('select_time4').value +
+                        ";" + document.getElementById('select_time5').value +
+                        ";" + document.getElementById('select_time6').value ;
+                //           var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
+                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+                $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
+            });
 
-
-<script src="jquery.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(".led").click(function(){
-            var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
-            // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
-            $.get("http://192.168.4.1:80/", {pin:p}); // execute get request
+            $(".set_time").click(function () {
+                var p = "<set_time>" +document.getElementById('hour').value;
+                //           var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
+                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+                $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
+            });
         });
-    });
-</script>
-</body>
-</html>
+    </script>
+    </body>
+    </html>
