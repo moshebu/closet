@@ -7,14 +7,21 @@
 
 <!-- in the <button> tags below the ID attribute is the value sent to the arduino -->
 <div id="title">
-    בקרת ארון לאכסון פלאפונים
+celular closet Beith Rivka
 </div>
 
 <div id="first">
 <!--    <form action="demo_form.asp">-->
-        <label for="30">First name:</label> <input type="text" name="FirstName" value="Mickey" id="30"><br>
-        <label for="31">Last name:</label> <input type="text" name="LastName" value="Mouse" id="31"><br>
-        <button id="10" class="add_name">submit</button>
+        <label >First name:</label> <input type="text" name="FirstName" placeholder="name" value="" id="name"><br>
+        <label >Last name:</label> <input type="text" name="LastName" placeholder="family" id="family"><br>
+        <select id="myGroup">
+        <option value="1">class A</option>
+        <option value="2">class B</option>
+        <option value="3" selected="selected">class C</option>
+        <option value="4">class D</option>
+        </select><br>
+        <button id="add" class="add_name">submit</button>
+        <button id="up" class="update_name">show</button>
         <br>
 <!--    </form>-->
     Cell number: <input type="text" name="cell_num" id="cell"><br>
@@ -30,9 +37,9 @@
         <option value="3">class C</option>
         <option value="4">class D</option>
     </select><br>
-    <button id="14" class="release_group">unlock class cells</button>
+    <button id="xxx" class="release_group">unlock class cells</button>
     <br>
-    <button id="15" class="release_all">release all</button>
+    <button id="yyy" class="release_all">release all cells</button>
     <br> <!-- button for pin 13 -->
 </div>
 <div id="second">
@@ -43,37 +50,37 @@
                 <option value="3">class C</option>
                 <option value="4">class D</option>
             </select><br>
-            <label>sunday:</label> <select id="select_time1">
+            <label id="l1">sunday:</label> <select id="select_time1">
             <option value="1200">12:00</option>
             <option value="1300">13:00</option>
             <option value="1400">14:00</option>
             <option value="1600">16:00</option>
         </select><br>
-            <label>monday:</label> <select id="select_time2">
+            <label id="l2">monday:</label> <select id="select_time2">
             <option value="1200">12:00</option>
             <option value="1300">13:00</option>
             <option value="1400">14:00</option>
             <option value="1600">16:00</option>
         </select><br>
-            <label>tuesday:</label> <select id="select_time3">
+            <label id="l3">tuesday:</label> <select id="select_time3">
             <option value="1200">12:00</option>
             <option value="1300">13:00</option>
             <option value="1400">14:00</option>
             <option value="1600">16:00</option>
         </select><br>
-            <label>wednesday:</label> <select id="select_time4">
+            <label id="l4">wednesday:</label> <select id="select_time4">
             <option value="1200">12:00</option>
             <option value="1300">13:00</option>
             <option value="1400">14:00</option>
             <option value="1600">16:00</option>
         </select><br>
-            <label>thursday:</label><select id="select_time5">
+            <label id="l5">thursday:</label><select id="select_time5">
             <option value="1200">12:00</option>
             <option value="1300">13:00</option>
             <option value="1400">14:00</option>
             <option value="1600">16:00</option>
         </select><br>
-            <label>friday:</label><select id="select_time6">
+            <label id="l6">friday:</label><select id="select_time6">
             <option value="1200">12:00</option>
             <option value="1300">13:00</option>
             <option value="1400">14:00</option>
@@ -93,10 +100,33 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $(".add_name").click(function () {
-                var p = "<name>" ;
+                var myName   = document.getElementById('name').value;
+                var myFamily = document.getElementById('family').value;
+                var myClass  = document.getElementById('myGroup').value;
+                var myCell   = document.getElementById('cell').value;
+                var myEntry  = {name: myName,family:myFamily,mclass:myClass};
+                localStorage.setItem(myCell, JSON.stringify(myEntry));
+                var p = "<update_name>" + document.getElementById('cell').value + ';' + document.getElementById('myGroup').value;
                 //         var p = $(".cell").attr('value'); // get id value (i.e. pin13, pin12, or pin11)
                 // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
                 $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
+            });
+            $(".update_name").click(function () {
+                if (document.getElementById('cell').value) {
+                    let curCell = document.getElementById('cell').value;
+                    if (localStorage.getItem(curCell)) {
+                        let curEntry = JSON.parse(localStorage.getItem(curCell));
+
+                        document.getElementById('name').value = curEntry.name;
+                        document.getElementById('family').value = curEntry.family;
+                        document.getElementById('myGroup').value = curEntry.mclass;
+                    }else
+                    {
+                        document.getElementById('name').value = "";
+                        document.getElementById('family').value = "";
+
+                    }
+                }
             });
             $(".reset_password").click(function () {
                 var p = "<reset_password>" +document.getElementById('cell').value;
