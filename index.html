@@ -7,23 +7,23 @@
 
 <!-- in the <button> tags below the ID attribute is the value sent to the arduino -->
 <div id="title">
-celular closet Beith Rivka
+    celular closet Beith Rivka
 </div>
 
 <div id="first">
-<!--    <form action="demo_form.asp">-->
-        <label >First name:</label> <input type="text" name="FirstName" placeholder="name" value="" id="name"><br>
-        <label >Last name:</label> <input type="text" name="LastName" placeholder="family" id="family"><br>
-        <select id="myGroup">
+    <!--    <form action="demo_form.asp">-->
+    <label >First name:</label> <input type="text" name="FirstName" placeholder="name" value="" id="name"><br>
+    <label >Last name:</label> <input type="text" name="LastName" placeholder="family" id="family"><br>
+    <select id="myGroup">
         <option value="1">class A</option>
         <option value="2">class B</option>
         <option value="3" selected="selected">class C</option>
         <option value="4">class D</option>
-        </select><br>
-        <button id="add" class="add_name">submit</button>
-        <button id="up" class="update_name">show</button>
-        <br>
-<!--    </form>-->
+    </select><br>
+    <button id="add" class="add_name">submit</button>
+    <button id="up" class="update_name">show</button>
+    <br>
+    <!--    </form>-->
     Cell number: <input type="text" name="cell_num" id="cell"><br>
     <button id="11" class="reset_password">reset cell password</button>
     <button id="12" class="unlock_cell">unlock cell</button>
@@ -44,142 +44,210 @@ celular closet Beith Rivka
 </div>
 <div id="second">
     <!--    <form action="demo_form.asp"> -->
-            <select id="select_group">
-                <option value="1">class A</option>
-                <option value="2">class B</option>
-                <option value="3">class C</option>
-                <option value="4">class D</option>
-            </select><br>
-            <label id="l1">sunday:</label> <select id="select_time1">
-            <option value="1200">12:00</option>
-            <option value="1300">13:00</option>
-            <option value="1400">14:00</option>
-            <option value="1600">16:00</option>
-        </select><br>
-            <label id="l2">monday:</label> <select id="select_time2">
-            <option value="1200">12:00</option>
-            <option value="1300">13:00</option>
-            <option value="1400">14:00</option>
-            <option value="1600">16:00</option>
-        </select><br>
-            <label id="l3">tuesday:</label> <select id="select_time3">
-            <option value="1200">12:00</option>
-            <option value="1300">13:00</option>
-            <option value="1400">14:00</option>
-            <option value="1600">16:00</option>
-        </select><br>
-            <label id="l4">wednesday:</label> <select id="select_time4">
-            <option value="1200">12:00</option>
-            <option value="1300">13:00</option>
-            <option value="1400">14:00</option>
-            <option value="1600">16:00</option>
-        </select><br>
-            <label id="l5">thursday:</label><select id="select_time5">
-            <option value="1200">12:00</option>
-            <option value="1300">13:00</option>
-            <option value="1400">14:00</option>
-            <option value="1600">16:00</option>
-        </select><br>
-            <label id="l6">friday:</label><select id="select_time6">
-            <option value="1200">12:00</option>
-            <option value="1300">13:00</option>
-            <option value="1400">14:00</option>
-            <option value="1600">16:00</option>
-        </select><br>
-            <button id="16" class="group_change">set_hour_table</button>
-            <br>
+    <select id="select_group">
+        <option value="1">class A</option>
+        <option value="2">class B</option>
+        <option value="3">class C</option>
+        <option value="4">class D</option>
+    </select><br>
+    <label id="l1">sunday:</label> <select id="select_time1">
+    <option value="1200">12:00</option>
+    <option value="1300">13:00</option>
+    <option value="1400">14:00</option>
+    <option value="1600">16:00</option>
+</select><br>
+    <label id="l2">monday:</label> <select id="select_time2">
+    <option value="1200">12:00</option>
+    <option value="1300">13:00</option>
+    <option value="1400">14:00</option>
+    <option value="1600">16:00</option>
+</select><br>
+    <label id="l3">tuesday:</label> <select id="select_time3">
+    <option value="1200">12:00</option>
+    <option value="1300">13:00</option>
+    <option value="1400">14:00</option>
+    <option value="1600">16:00</option>
+</select><br>
+    <label id="l4">wednesday:</label> <select id="select_time4">
+    <option value="1200">12:00</option>
+    <option value="1300">13:00</option>
+    <option value="1400">14:00</option>
+    <option value="1600">16:00</option>
+</select><br>
+    <label id="l5">thursday:</label><select id="select_time5">
+    <option value="1200">12:00</option>
+    <option value="1300">13:00</option>
+    <option value="1400">14:00</option>
+    <option value="1600">16:00</option>
+</select><br>
+    <label id="l6">friday:</label><select id="select_time6">
+    <option value="1200">12:00</option>
+    <option value="1300">13:00</option>
+    <option value="1400">14:00</option>
+    <option value="1600">16:00</option>
+</select><br>
+    <button id="17" class="group_change">set_hour_table</button>
+    <br>
     <!--  </form>-->
-    </div>
-    <div>
-        new time: <input type="text" name="hour" id="hour"><br>
-        <button id="17" class="set_time">set time</button>
+</div>
+<div>
+    new time: <input type="text" name="hour" id="hour"><br>
+    <button id="17" class="set_time">set time</button>
 
-    </div>
+</div>
+<div>
+    </select><br>
+    <label id="l8">select network</label><select id="select_network">
+    <option value="local network">local network</option>
+    <option value="separate network">separate network</option>
+    <option value="remote network">remote network</option>
+    <option value="localhost" selected="selected">localhost</option>
+    </select><br>
+    <br><button id="network" class="set_network">set network</button><br>
+    <label >Closet ID:</label> <input type="text" name="id_select" placeholder="id" id="my_id" value="12345678"><br>
 
-    <script src="jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".add_name").click(function () {
-                var myName   = document.getElementById('name').value;
-                var myFamily = document.getElementById('family').value;
-                var myClass  = document.getElementById('myGroup').value;
-                var myCell   = document.getElementById('cell').value;
-                var myEntry  = {name: myName,family:myFamily,mclass:myClass};
-                localStorage.setItem(myCell, JSON.stringify(myEntry));
-                var p = "<update_name>" + document.getElementById('cell').value + ';' + document.getElementById('myGroup').value;
-                //         var p = $(".cell").attr('value'); // get id value (i.e. pin13, pin12, or pin11)
-                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
-                $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
-            });
-            $(".update_name").click(function () {
-                if (document.getElementById('cell').value) {
-                    let curCell = document.getElementById('cell').value;
-                    if (localStorage.getItem(curCell)) {
-                        let curEntry = JSON.parse(localStorage.getItem(curCell));
+</div>
+<script src="jquery-3.2.1.js"></script>
+<script type="text/javascript">
+    addr = "http://localhost:8080/";
+    var xxx;
+    $(document).ready(function () {
+        $(".add_name").click(function () {
+            var myName   = document.getElementById('name').value;
+            var myFamily = document.getElementById('family').value;
+            var myClass  = document.getElementById('myGroup').value;
+            var myCell   = document.getElementById('cell').value;
+            var myEntry  = {name: myName,family:myFamily,mclass:myClass};
+            localStorage.setItem(myCell, JSON.stringify(myEntry));
+            var p = "<update_name>" + document.getElementById('cell').value + ';' + document.getElementById('myGroup').value;
+            //         var p = $(".cell").attr('value'); // get id value (i.e. pin13, pin12, or pin11)
+            // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+            $.get(addr, {xxx: p, yyy: "fff"},function( data) {
+            //    var s= document.getElementById('cell');
+            //    var partsArray = data.split(/<|>/);
+            //    s.value = partsArray[6];
+                alert( "Data Loaded: " + data );
+            }); // execute get request); // execute get request
 
-                        document.getElementById('name').value = curEntry.name;
-                        document.getElementById('family').value = curEntry.family;
-                        document.getElementById('myGroup').value = curEntry.mclass;
-                    }else
-                    {
-                        document.getElementById('name').value = "";
-                        document.getElementById('family').value = "";
-
-                    }
-                }
-            });
-            $(".reset_password").click(function () {
-                var p = "<reset_password>" +document.getElementById('cell').value;
-    //            var xxx = "<reset>";
-                //         var p = $(".cell").attr('value'); // get id value (i.e. pin13, pin12, or pin11)
-                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
-                $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
-            });
-            $(".unlock_cell").click(function () {
-                var p = "<release_cell>" +document.getElementById('cell').value;
-                //         var p = $(".cell").attr('value'); // get id value (i.e. pin13, pin12, or pin11)
-                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
-                $.get("http://192.168.4.1:80/", {xxx : p}); // execute get request
-            });
-            $(".open_cell").click(function () {
-                var p = "<open_cell>" +document.getElementById('cell').value;
-                //         var p = $(".cell").attr('value'); // get id value (i.e. pin13, pin12, or pin11)
-                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
-                $.get("http://192.168.4.1:80/", {xxx : p}); // execute get request
-            });
-            $(".release_group").click(function () {
-                var p ="<release_group>" + document.getElementById('group').value;
-    //            var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
-                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
-                $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
-            });
-            $(".release_all").click(function () {
-                var p = "<release_all>";
-                //           var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
-                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
-                $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
-            });
-            $(".group_change").click(function () {
-                var p =  "<set_hour_table>" +
-                        ";" + document.getElementById('select_group').value +
-                        ";" + document.getElementById('select_time1').value +
-                        ";" + document.getElementById('select_time2').value +
-                        ";" + document.getElementById('select_time3').value +
-                        ";" + document.getElementById('select_time4').value +
-                        ";" + document.getElementById('select_time5').value +
-                        ";" + document.getElementById('select_time6').value ;
-                //           var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
-                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
-                $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
-            });
-
-            $(".set_time").click(function () {
-                var p = "<set_time>" +document.getElementById('hour').value;
-                //           var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
-                // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
-                $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
-            });
         });
-    </script>
-    </body>
-    </html>
+        $(".update_name").click(function () {
+            if (document.getElementById('cell').value) {
+                var curCell = document.getElementById('cell').value;
+                if (localStorage.getItem(curCell)) {
+                    var curEntry = JSON.parse(localStorage.getItem(curCell));
+
+                    document.getElementById('name').value = curEntry.name;
+                    document.getElementById('family').value = curEntry.family;
+                    document.getElementById('myGroup').value = curEntry.mclass;
+                }else
+                {
+                    document.getElementById('name').value = "";
+                    document.getElementById('family').value = "";
+
+                }
+            }
+        });
+        $(".reset_password").click(function () {
+            var p = "<reset_password>" +document.getElementById('cell').value;
+
+            //            var xxx = "<reset>";
+            //         var p = $(".cell").attr('value'); // get id value (i.e. pin13, pin12, or pin11)
+            // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+            $.get(addr, {xxx: p},function( data) {
+                var s= document.getElementById('cell');
+                var partsArray = data.split(/<|>/);
+                s.value = partsArray[6];
+                alert( "Data Loaded: " + data );
+            }); // execute get request); // execute get request
+        });
+        $(".unlock_cell").click(function () {
+            var p = "<release_cell>" +document.getElementById('cell').value;
+            var p1 = addr+p;
+            var myUrl = addr;
+
+            var proxy = 'https://cors-anywhere.herokuapp.com/';
+
+            var finalURL = proxy + myUrl;
+            //         var p = $(".cell").attr('value'); // get id value (i.e. pin13, pin12, or pin11)
+            // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+            $.get(finalURL, function( data ) {
+                console.log(data);
+            });
+            //   $.ajax({
+            //       type:  'GET',
+            //       url:   finalURL,
+            //       dataType: 'text',
+            //       headers: {
+            //           'Access-Control-Allow-Origin': '*'
+            //       },
+            //       success: function(data){
+            //        var resp = JSON.parse(data)
+            //           alert(data);
+            //       }
+            //   });
+            //$.get(addr, {xxx : p}); // execute get request
+        });
+        
+        $(".open_cell").click(function () {
+            var p = "<open_cell>" +document.getElementById('cell').value;
+            var func   = "open_cell";
+            var cell   = document.getElementById('cell').value;
+            var action = "write";
+            var id     = document.getElementById('my_id').value;
+            // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+            //   $.get("http://192.168.4.1:80/", {xxx : p}); // execute get request
+            $.get( addr, {function: func, action: action, cell: cell, id: id},function( data) {
+               //     var s= document.getElementById('cell');
+               //     var partsArray = data.split(/<|>/);
+               //     s.value = partsArray[6];
+               //     alert( "Data Loaded: " + data );
+                });
+        });
+        $(".release_group").click(function () {
+            var p ="<release_group>" + document.getElementById('group').value;
+            //            var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
+            // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+            $.get("http://192.168.1.9:80/", {xxx: p}); // execute get request
+        });
+        $(".release_all").click(function () {
+            var p = "<release_all>";
+            //           var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
+            // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+            $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
+        });
+        $(".group_change").click(function () {
+            var p =  "<set_hour_table>" +
+                ";" + document.getElementById('select_group').value +
+                ";" + document.getElementById('select_time1').value +
+                ";" + document.getElementById('select_time2').value +
+                ";" + document.getElementById('select_time3').value +
+                ";" + document.getElementById('select_time4').value +
+                ";" + document.getElementById('select_time5').value +
+                ";" + document.getElementById('select_time6').value ;
+            //           var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
+            // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+            $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
+        });
+
+        $(".set_time").click(function () {
+            var p = "<set_time>" +document.getElementById('hour').value;
+            //           var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
+            // send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+            $.get("http://192.168.4.1:80/", {xxx: p}); // execute get request
+        });
+        $(".set_network").click(function () {
+            var network = document.getElementById('select_network').value;
+            if (network == "local network")
+                addr = "http://192.168.1.9:80/";
+            else if (network == "separate network")
+                addr = "http://192.168.4.1:80/";
+            else if (network == "remote network")
+                addr = "http://185.60.170.37/node";
+            else if (network == "localhost")
+                addr = "http://localhost:8080/";
+        });
+
+    });
+</script>
+</body>
+</html>
